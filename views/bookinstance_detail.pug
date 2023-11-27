@@ -11,6 +11,8 @@ block content
   p #[strong Status: ]
     if bookinstance.status=='Available'
       span.text-success #{bookinstance.status}
+      p
+      a(href=bookinstance.url+'/delete') Delete book instance
     else if bookinstance.status=='Maintenance'
       span.text-danger #{bookinstance.status}
     else
